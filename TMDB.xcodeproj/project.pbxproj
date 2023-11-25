@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6A3BA0312B109D070093E923 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3BA0302B109D070093E923 /* MovieCell.swift */; };
+		6A3BA0332B10AB400093E923 /* GenreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3BA0322B10AB400093E923 /* GenreCell.swift */; };
+		6A3BA0372B10AC760093E923 /* Jomhuria.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6A3BA0352B10AC760093E923 /* Jomhuria.ttf */; };
+		6A3BA0382B10AC760093E923 /* Inter.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6A3BA0362B10AC760093E923 /* Inter.ttf */; };
 		6A43A5802B10870100399565 /* TMDBApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A43A57F2B10870100399565 /* TMDBApp.swift */; };
 		6A43A5822B10870100399565 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A43A5812B10870100399565 /* ContentView.swift */; };
 		6A43A5842B10870200399565 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A43A5832B10870200399565 /* Assets.xcassets */; };
@@ -14,6 +18,10 @@
 		6A43A5912B10870300399565 /* TMDBTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A43A5902B10870300399565 /* TMDBTests.swift */; };
 		6A43A59B2B10870300399565 /* TMDBUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A43A59A2B10870300399565 /* TMDBUITests.swift */; };
 		6A43A59D2B10870300399565 /* TMDBUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A43A59C2B10870300399565 /* TMDBUITestsLaunchTests.swift */; };
+		6A43A5AA2B1087A200399565 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A43A5A92B1087A200399565 /* Keys.swift */; };
+		6A43A5AE2B1087D000399565 /* MovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A43A5AD2B1087D000399565 /* MovieViewModel.swift */; };
+		6A43A5B12B10886000399565 /* MovieModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A43A5B02B10886000399565 /* MovieModels.swift */; };
+		6A43A5B32B10886B00399565 /* Genres.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A43A5B22B10886B00399565 /* Genres.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +42,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6A3BA0302B109D070093E923 /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
+		6A3BA0322B10AB400093E923 /* GenreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreCell.swift; sourceTree = "<group>"; };
+		6A3BA0352B10AC760093E923 /* Jomhuria.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Jomhuria.ttf; sourceTree = "<group>"; };
+		6A3BA0362B10AC760093E923 /* Inter.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Inter.ttf; sourceTree = "<group>"; };
+		6A3BA0392B10ACAF0093E923 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		6A43A57C2B10870100399565 /* TMDB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TMDB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A43A57F2B10870100399565 /* TMDBApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBApp.swift; sourceTree = "<group>"; };
 		6A43A5812B10870100399565 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -44,6 +57,10 @@
 		6A43A5962B10870300399565 /* TMDBUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TMDBUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A43A59A2B10870300399565 /* TMDBUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBUITests.swift; sourceTree = "<group>"; };
 		6A43A59C2B10870300399565 /* TMDBUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		6A43A5A92B1087A200399565 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
+		6A43A5AD2B1087D000399565 /* MovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewModel.swift; sourceTree = "<group>"; };
+		6A43A5B02B10886000399565 /* MovieModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModels.swift; sourceTree = "<group>"; };
+		6A43A5B22B10886B00399565 /* Genres.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genres.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +88,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6A3BA02F2B109CE30093E923 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6A43A5812B10870100399565 /* ContentView.swift */,
+				6A3BA0302B109D070093E923 /* MovieCell.swift */,
+				6A3BA0322B10AB400093E923 /* GenreCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6A3BA0342B10AC490093E923 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				6A3BA0362B10AC760093E923 /* Inter.ttf */,
+				6A3BA0352B10AC760093E923 /* Jomhuria.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		6A43A5732B10870100399565 = {
 			isa = PBXGroup;
 			children = (
@@ -94,10 +130,15 @@
 		6A43A57E2B10870100399565 /* TMDB */ = {
 			isa = PBXGroup;
 			children = (
+				6A3BA0392B10ACAF0093E923 /* Info.plist */,
 				6A43A57F2B10870100399565 /* TMDBApp.swift */,
-				6A43A5812B10870100399565 /* ContentView.swift */,
-				6A43A5832B10870200399565 /* Assets.xcassets */,
+				6A3BA02F2B109CE30093E923 /* Views */,
+				6A43A5AF2B10884B00399565 /* Models */,
+				6A43A5AC2B1087C300399565 /* ViewModels */,
+				6A43A5AB2B1087B900399565 /* Supporting */,
 				6A43A5852B10870200399565 /* Preview Content */,
+				6A43A5832B10870200399565 /* Assets.xcassets */,
+				6A3BA0342B10AC490093E923 /* Fonts */,
 			);
 			path = TMDB;
 			sourceTree = "<group>";
@@ -125,6 +166,31 @@
 				6A43A59C2B10870300399565 /* TMDBUITestsLaunchTests.swift */,
 			);
 			path = TMDBUITests;
+			sourceTree = "<group>";
+		};
+		6A43A5AB2B1087B900399565 /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				6A43A5A92B1087A200399565 /* Keys.swift */,
+			);
+			path = Supporting;
+			sourceTree = "<group>";
+		};
+		6A43A5AC2B1087C300399565 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				6A43A5AD2B1087D000399565 /* MovieViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		6A43A5AF2B10884B00399565 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6A43A5B02B10886000399565 /* MovieModels.swift */,
+				6A43A5B22B10886B00399565 /* Genres.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +299,8 @@
 			files = (
 				6A43A5872B10870200399565 /* Preview Assets.xcassets in Resources */,
 				6A43A5842B10870200399565 /* Assets.xcassets in Resources */,
+				6A3BA0372B10AC760093E923 /* Jomhuria.ttf in Resources */,
+				6A3BA0382B10AC760093E923 /* Inter.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,7 +325,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A3BA0312B109D070093E923 /* MovieCell.swift in Sources */,
 				6A43A5822B10870100399565 /* ContentView.swift in Sources */,
+				6A43A5AA2B1087A200399565 /* Keys.swift in Sources */,
+				6A3BA0332B10AB400093E923 /* GenreCell.swift in Sources */,
+				6A43A5B12B10886000399565 /* MovieModels.swift in Sources */,
+				6A43A5B32B10886B00399565 /* Genres.swift in Sources */,
+				6A43A5AE2B1087D000399565 /* MovieViewModel.swift in Sources */,
 				6A43A5802B10870100399565 /* TMDBApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -425,11 +499,12 @@
 				DEVELOPMENT_TEAM = N4RBA36MUP;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TMDB/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -437,9 +512,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Isaac-Higgins.TMDB";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -454,11 +532,12 @@
 				DEVELOPMENT_TEAM = N4RBA36MUP;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TMDB/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -466,9 +545,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Isaac-Higgins.TMDB";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

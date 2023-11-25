@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct TMDBApp: App {
+    @StateObject var movieVM = MoviewViewModel()
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(movieVM)
         }
     }
 }

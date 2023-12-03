@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct HomeView: View {
     @EnvironmentObject var movieVM: MoviewViewModel
-    
+    @State var detailsViewActive = false
     var body: some View {
         NavigationStack {
             VStack {
@@ -41,8 +41,14 @@ struct ContentView: View {
                 
                 List {
                     ForEach(movieVM.filteredListOfMovies) { movieData in
-                        MovieCell(movieData: movieData)
-                            .listRowSeparator(.hidden)
+                        ZStack {
+                            MovieCell(movieData: movieData)
+                            NavigationLink(destination: DetailsView(movieInfo: movieData)) {
+                                EmptyView()
+                            }
+                            .opacity(0)
+                        }
+                        .listRowSeparator(.hidden)
                     }
                 }
                 .scrollContentBackground(.hidden)
@@ -55,6 +61,6 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    HomeView()
         .environmentObject(MoviewViewModel())
 }

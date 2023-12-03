@@ -17,9 +17,9 @@ enum NetworkError: Error {
 }
 
 class MoviewViewModel: ObservableObject {
-    @Published var searchBarText = ""
     @Published var filteredListOfMovies = [MovieData]()
     @Published var listOfMovies = [MovieData]()
+    @Published var searchBarText = ""
     
     init() {
         self.RetrieveMovies() { _ in }
@@ -37,15 +37,15 @@ class MoviewViewModel: ObservableObject {
             
           do {
               let movies = try JSONDecoder().decode(MovieResponseModel.self, from: data)
-              self.listOfMovies = movies.results.map { MovieData(posterImage: Data(), movieInfo: $0) }
-              self.filteredListOfMovies = self.listOfMovies
-              self.listOfMovies.forEach { movieInfo in
-                  self.RetrieveMoviePoster(posterPath: movieInfo.movieInfo.poster_path ?? "") { result in
-                      switch result {
-                      case .success(_):
-                          print("Success")
-                      case .failure(let error):
-                          print("Error: \(error)")
+              DispatchQueue.main.async {
+                  self.listOfMovies = movies.results.map { MovieData(posterImage: Data(), backDropImage: Data(), movieInfo: $0) }
+                  self.filteredListOfMovies = self.listOfMovies
+                  self.listOfMovies.forEach { movieInfo in
+                      self.RetrieveMoviePoster(posterPath: movieInfo.movieInfo.poster_path) { result in
+                          switch result {
+                          case .success(_): break
+                          case .failure(_): break
+                          }
                       }
                   }
               }
@@ -79,11 +79,54 @@ class MoviewViewModel: ObservableObject {
         }.resume()
     }
     
+//    "w300",
+//    "w780",
+//    "w1280",
+//    "original"
+    
+    public func RetrieveMovieBackDrop(movieInfo: MovieModel, completion: @escaping (Result<Data, NetworkError>) -> Void) {
+        if (movieInfo.backdrop_path.isEmpty) {
+            DispatchQueue.main.async {
+                if let index = self.listOfMovies.firstIndex(where: {$0.movieInfo.title == movieInfo.title})
+                {
+                    self.listOfMovies[index].backDropImage = self.listOfMovies[index].posterImage
+                }
+                if let index = self.filteredListOfMovies.firstIndex(where: {$0.movieInfo.title == movieInfo.title})
+                {
+                    self.filteredListOfMovies[index].backDropImage = self.filteredListOfMovies[index].posterImage
+                }
+            }
+            completion(.failure(.invalidURL))
+        }
+        var request = URLRequest(url: URL(string: "https://image.tmdb.org/t/p/w1280\(String(describing: movieInfo.backdrop_path))?api_key=\(Keys.TheMovieDataBaseApiKey)")!)
+        request.httpMethod = "GET"
+        
+        URLSession.shared.dataTask(with: request) { (data, response, error) in
+            guard let data = data, error == nil else {
+                completion(.failure(.noData))
+                return
+            }
+            DispatchQueue.main.async {
+                if let index = self.listOfMovies.firstIndex(where: {$0.movieInfo.title == movieInfo.title})
+                {
+                    self.listOfMovies[index].backDropImage = data
+                }
+                if let index = self.filteredListOfMovies.firstIndex(where: {$0.movieInfo.title == movieInfo.title})
+                {
+                    self.filteredListOfMovies[index].backDropImage = data
+                }
+            }
+            completion(.success(data))
+        }.resume()
+    }
+    
     public func UpdateFilteredListOfMovies() {
-        if (self.searchBarText.isEmpty) {
-            self.filteredListOfMovies = self.listOfMovies
-        } else {
-            self.filteredListOfMovies = self.listOfMovies.filter({$0.movieInfo.title!.contains(self.searchBarText)})
+        DispatchQueue.main.async {
+            if (self.searchBarText.isEmpty) {
+                self.filteredListOfMovies = self.listOfMovies
+            } else {
+                self.filteredListOfMovies = self.listOfMovies.filter({$0.movieInfo.title.contains(self.searchBarText)})
+            }
         }
     }
 }

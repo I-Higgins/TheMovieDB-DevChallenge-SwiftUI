@@ -12,7 +12,7 @@ struct TMDBApp: App {
     @StateObject var movieVM = MoviewViewModel()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeView()
                 .environmentObject(movieVM)
         }
     }

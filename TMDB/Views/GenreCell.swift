@@ -68,7 +68,7 @@ struct GenreCell: View {
 #Preview {
     VStack {
         GenreCell(text: "Action")
-        GenresView(items: ["Action", "Comedy", "Drama", "Mystery"])
+        GenresView(items: ["Action", "Adventure", "Science Fiction"])
     }
     .frame(maxWidth: 220)
 }
